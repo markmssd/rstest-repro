@@ -1,0 +1,16 @@
+{
+  "name": "rstest-restore-mocks",
+  "private": true,
+  "scripts": {
+    "test": "rstest run",
+    "test:jest": "jest",
+    "test:vitest4": "node node_modules/vitest4/vitest.mjs run",
+    "test:vitest5": "node node_modules/vitest5/vitest.mjs run"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.2",
+    "jest": "30.5.2",
+    "vitest4": "npm:vitest@4.1.11",
+    "vitest5": "npm:vitest@5.0.2"
+  }
+}
