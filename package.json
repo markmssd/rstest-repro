@@ -1,0 +1,14 @@
+{
+  "name": "rstest-top-level-await-dependency",
+  "private": true,
+  "scripts": {
+    "test": "rstest run"
+  },
+  "dependencies": {
+    "tla-pkg": "file:./packages/tla-pkg"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.2",
+    "jsdom": "30.1.0"
+  }
+}
