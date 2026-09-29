@@ -1,0 +1,13 @@
+{
+  "name": "rstest-mock-with-require",
+  "private": true,
+  "scripts": {
+    "test": "rstest run",
+    "test:esm-neighbor": "rstest run --config rstest.esm-neighbor.config.mjs",
+    "test:jest": "jest"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.2",
+    "jest": "30.5.2"
+  }
+}
