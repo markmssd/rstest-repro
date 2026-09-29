@@ -1,0 +1,12 @@
+{
+  "name": "rstest-eager-matcher-message",
+  "private": true,
+  "scripts": {
+    "test": "rstest run",
+    "test:jest": "jest"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.2",
+    "jest": "30.5.2"
+  }
+}

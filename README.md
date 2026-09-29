@@ -1,5 +1,11 @@
-# Rstest reproductions
+# Passing matchers inspect their arguments
 
-Each reproduction lives on its own branch:
+`toHaveBeenCalledWith` and `toContain` format their failure message before checking whether they
+passed, so a passing assertion still walks every argument with the inspector. Here that reads a
+getter that throws. Jest only formats the message when the assertion fails.
 
-- [`development-builds`](https://github.com/markmssd/rstest-repro/tree/development-builds): jsdom tests resolve the `development` export condition, unlike Jest
+```sh
+npm install
+npm test          # Rstest: both tests fail, the getter was read
+npm run test:jest # Jest: passes
+```
