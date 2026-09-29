@@ -1,0 +1,13 @@
+{
+  "name": "rstest-describe-function-name",
+  "private": true,
+  "scripts": {
+    "test": "rstest run",
+    "test:vm": "rstest run --config rstest.vm.config.mjs",
+    "test:jest": "jest"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.2",
+    "jest": "30.5.2"
+  }
+}
