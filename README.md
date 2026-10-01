@@ -1,10 +1,14 @@
-# Rstest reproductions
+# `rs.spyOn` throws on exports of a factory-mocked module
 
-Each reproduction lives on its own branch:
+Since 0.12.3, spying on an export of a module mocked with a factory throws
+`Cannot spy on "greet": it is a read-only export of a third-party or native ES module`.
+It passes on 0.12.2 and on Vitest. Spying on the same module without mocking it still works.
 
-- [`development-builds`](https://github.com/markmssd/rstest-repro/tree/development-builds): jsdom tests resolve the `development` export condition, unlike Jest
-- [`describe-function-name`](https://github.com/markmssd/rstest-repro/tree/describe-function-name): `describe(fn)` crashes the worker or hangs, unlike Jest
-- [`eager-matcher-message`](https://github.com/markmssd/rstest-repro/tree/eager-matcher-message): passing `toHaveBeenCalledWith` and `toContain` inspect their arguments, unlike Jest
-- [`top-level-await-dependency`](https://github.com/markmssd/rstest-repro/tree/top-level-await-dependency): `rs.requireActual` and mock factories lose the exports of a dependency with top-level await
-- [`mock-with-require`](https://github.com/markmssd/rstest-repro/tree/mock-with-require): `rs.mock` + `require()` crashes with a missing webpack runtime helper
-- [`restore-mocks`](https://github.com/markmssd/rstest-repro/tree/restore-mocks): `restoreMocks` wipes `mockReturnValue`, unlike Jest 30 and Vitest 4+
+```sh
+npm install
+npm test             # Rstest 0.12.3: rstest/mocked.test.js fails
+npm run test:0.12.2  # Rstest 0.12.2: both pass
+npm run test:vitest  # Vitest 5: both pass
+```
+
+Both Rstest versions are installed through an npm alias, so each script runs its own copy.

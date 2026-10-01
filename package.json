@@ -1,0 +1,14 @@
+{
+  "name": "rstest-spy-on-mocked-module",
+  "private": true,
+  "scripts": {
+    "test": "node node_modules/@rstest/core/bin/rstest.js run",
+    "test:0.12.2": "node node_modules/rstest-0.12.2/bin/rstest.js run",
+    "test:vitest": "vitest run"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.3",
+    "rstest-0.12.2": "npm:@rstest/core@0.12.2",
+    "vitest": "5.0.3"
+  }
+}
