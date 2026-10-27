@@ -9,3 +9,5 @@ Each reproduction lives on its own branch:
 - [`mock-with-require`](https://github.com/markmssd/rstest-repro/tree/mock-with-require): `rs.mock` + `require()` crashes with a missing webpack runtime helper
 - [`restore-mocks`](https://github.com/markmssd/rstest-repro/tree/restore-mocks): `restoreMocks` wipes `mockReturnValue`, unlike Jest 30 and Vitest 4+
 - [`spy-on-mocked-module`](https://github.com/markmssd/rstest-repro/tree/spy-on-mocked-module): `rs.spyOn` throws on exports of a factory-mocked module since 0.12.3
+- [`after-each-order`](https://github.com/markmssd/rstest-repro/tree/after-each-order): `afterEach` hooks run last-declared first, unlike Jest, with no option like Vitest's `sequence.hooks`
+- [`mock-module-side-effects`](https://github.com/markmssd/rstest-repro/tree/mock-module-side-effects): a module that only calls `rs.mock` is dropped under `"sideEffects": false`
