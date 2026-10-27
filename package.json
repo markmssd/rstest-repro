@@ -1,0 +1,15 @@
+{
+  "name": "rstest-after-each-order",
+  "private": true,
+  "scripts": {
+    "test": "rstest run",
+    "test:jest": "jest",
+    "test:vitest": "vitest run",
+    "test:vitest-list": "vitest run --sequence.hooks=list"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.5",
+    "jest": "30.5.2",
+    "vitest": "4.1.11"
+  }
+}
