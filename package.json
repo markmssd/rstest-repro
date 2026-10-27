@@ -1,0 +1,12 @@
+{
+  "name": "rstest-mock-module-side-effects",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "test": "rstest run",
+    "test:no-pruning": "rstest run --config rstest.no-pruning.config.mjs"
+  },
+  "devDependencies": {
+    "@rstest/core": "0.12.5"
+  }
+}
